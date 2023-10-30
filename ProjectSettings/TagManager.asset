@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Horizantal
   - Vertical
+  - leftPaddle
+  - rightWall
+  - leftWall
   layers:
   - Default
   - TransparentFX

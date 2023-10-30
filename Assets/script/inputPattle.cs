@@ -7,41 +7,32 @@ public class inputPattle : MonoBehaviour
 {
     public float speed = 3f;
     public string leftOrRight;
-    // Start is called before the first frame update
-    void Start()
+
+    //function that handles movement and has variables for up and down keycode?
+    void setKeyAndMovement(KeyCode up, KeyCode down)
     {
-        
+        if (Input.GetKey(up) && transform.position.y <= 3.6f)
+        {
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
+        }
+        else if (Input.GetKey(down) && transform.position.y >= -3.6f)
+        {
+            transform.Translate(Vector3.down * speed * Time.deltaTime);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (leftOrRight == "left") 
+        //Change within Unity if it's left or the right paddle
+        if (leftOrRight == "left")
         {
-            if (Input.GetKey(KeyCode.W))
-            {
-                transform.Translate(Vector3.up * speed * Time.deltaTime);
-                Debug.Log("Yes W is pressed down.");
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-                transform.Translate(Vector3.down * speed * Time.deltaTime);
-                Debug.Log("Yes S is pressed down.");
-            }
-        }else if(leftOrRight == "right")
-        {
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                transform.Translate(Vector3.up * speed * Time.deltaTime);
-                Debug.Log("Yes up arrow is pressed down.");
-            }
-            else if (Input.GetKey(KeyCode.DownArrow))
-            {
-                transform.Translate(Vector3.down * speed * Time.deltaTime);
-                Debug.Log("Yes down arrow is pressed down.");
-            }
+            setKeyAndMovement(KeyCode.W, KeyCode.S);
         }
-       
+        else if (leftOrRight == "right")
+        {
+            setKeyAndMovement(KeyCode.UpArrow, KeyCode.DownArrow);
+        }
 
     }
 }

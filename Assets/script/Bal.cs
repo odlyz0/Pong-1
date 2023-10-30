@@ -74,12 +74,12 @@ public class Bal : MonoBehaviour
             ySpeed = ySpeed * -1;
         }
        
-        else if (collision.gameObject.CompareTag("leftWall"))
+        else if (collision.gameObject.CompareTag("Vertical"))
         {
             rightScore++;
             resetBall("left");
         }
-        else if (collision.gameObject.CompareTag("rightWall"))
+        else if (collision.gameObject.CompareTag("Vertical"))
         {
             leftScore++;
             resetBall("right");
