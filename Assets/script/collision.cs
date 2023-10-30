@@ -33,7 +33,11 @@ public class collision : MonoBehaviour
         {
             ySpeed = ySpeed * -1;
         }
-        if (collision.gameObject.CompareTag("Vertical"))
+        if (collision.gameObject.CompareTag("leftWall"))
+        {
+            xSpeed = xSpeed * -1;
+        }
+        if (collision.gameObject.CompareTag("rightwall"))
         {
             xSpeed = xSpeed * -1;
         }

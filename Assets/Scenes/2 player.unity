@@ -134,10 +134,9 @@ GameObject:
   - component: {fileID: 64150227}
   - component: {fileID: 64150226}
   - component: {fileID: 64150225}
-  - component: {fileID: 64150228}
   m_Layer: 0
   m_Name: vertical wall right
-  m_TagString: Vertical
+  m_TagString: rightWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,22 +253,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -1.063, y: -3.258, z: 90.056}
---- !u!114 &64150228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64150224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cdb7f881876d4b4aa10ba475c6c7a29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  A: 0
-  B: 0
-  C: 0
-  speed: 0
 --- !u!1 &242645480
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,10 +266,10 @@ GameObject:
   - component: {fileID: 242645481}
   - component: {fileID: 242645485}
   - component: {fileID: 242645484}
-  - component: {fileID: 242645487}
+  - component: {fileID: 242645486}
   m_Layer: 0
   m_Name: ball
-  m_TagString: Vertical
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -307,7 +290,7 @@ MonoBehaviour:
   Yposition: 0
   xSpeed: 0
   ySpeed: 0
-  scoreField: {fileID: 0}
+  scoreField: {fileID: 1651320976}
   topScore: 10
 --- !u!212 &242645482
 SpriteRenderer:
@@ -448,7 +431,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &242645487
+--- !u!114 &242645486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -460,10 +443,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdb7f881876d4b4aa10ba475c6c7a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  A: 0
-  B: 0
-  C: 0
-  speed: 0
+  text: {fileID: 1651320976}
+  scoreOne: 0
+  scoreTwo: 0
 --- !u!1 &334425069
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,10 +768,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdb7f881876d4b4aa10ba475c6c7a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  A: 0
-  B: 0
-  C: 0
-  speed: 0
+  text: {fileID: 1651320976}
+  scoreOne: 0
+  scoreTwo: 0
 --- !u!114 &1354444792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1015,6 +996,7 @@ GameObject:
   - component: {fileID: 1651320977}
   - component: {fileID: 1651320976}
   - component: {fileID: 1651320978}
+  - component: {fileID: 1651320979}
   m_Layer: 5
   m_Name: ScoreBoard
   m_TagString: Untagged
@@ -1150,10 +1132,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdb7f881876d4b4aa10ba475c6c7a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  A: 0
-  B: 0
-  C: 0
-  speed: 0
+  text: {fileID: 0}
+  scoreOne: 0
+  scoreTwo: 0
+--- !u!114 &1651320979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651320974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cdb7f881876d4b4aa10ba475c6c7a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  scoreOne: 0
+  scoreTwo: 0
 --- !u!1 &1754486165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,10 +1451,9 @@ GameObject:
   - component: {fileID: 2023015517}
   - component: {fileID: 2023015516}
   - component: {fileID: 2023015515}
-  - component: {fileID: 2023015518}
   m_Layer: 0
   m_Name: vertical wall left
-  m_TagString: Vertical
+  m_TagString: leftWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1575,22 +1570,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -1.063, y: -3.258, z: 90.056}
---- !u!114 &2023015518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023015514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cdb7f881876d4b4aa10ba475c6c7a29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  A: 0
-  B: 0
-  C: 0
-  speed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

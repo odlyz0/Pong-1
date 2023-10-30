@@ -26,6 +26,6 @@ public class ComputerPlayer : MonoBehaviour
         {
             ySpeed = ySpeed * -1f;
         }
-        transform.position = new Vector3(transform.position.x, ball.transform.position.y/ ySpeed, transform.position.z);
+        //transform.position = new Vector3(transform.position.x, ball.transform.position.y/ ySpeed, transform.position.z);
     }
 }

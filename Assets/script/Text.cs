@@ -1,45 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-public class Text : MonoBehaviour
+public class Score : MonoBehaviour
 {
-    public int A;
-    public int B;
-    public int C;
-    public float speed;
-
-    void letsAddStuff(int value1, int value2)
-    {
-        C = value1 + value2;
-        Debug.Log(C);
-    }
-
     // Start is called before the first frame update
+    public TMP_Text text;
+    public int scoreOne;
+    public int scoreTwo;
+  
+
     void Start()
     {
-        letsAddStuff(A, B);
-        letsAddStuff(2, 4);
     }
 
-    // Update is called once per frame
+
     void Update()
+    { }
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        inputPaddle(KeyCode.W, KeyCode.S);
-        inputPaddle(KeyCode.UpArrow, KeyCode.DownArrow);
-    }
-
-
-    void inputPaddle(KeyCode up, KeyCode down)
-    {
-        if (Input.GetKey(up))
+        if (collision.gameObject.CompareTag("leftWall"))
         {
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
+            scoreOne++;
+            
+            
+
         }
-        else if (Input.GetKey(down))
+        if (collision.gameObject.CompareTag("Vertical"))
         {
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
+            scoreTwo++;
+            text.text = scoreOne+ " - " + scoreTwo;
         }
     }
-
-   }
+}

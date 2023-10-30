@@ -38,7 +38,7 @@ public class Bal : MonoBehaviour
 
         xSpeed = 4f;
         ySpeed = 4f;
-        scoreField.text = " 0 - 0";
+        scoreField.text = " 0  -  0";
 
     }
 
@@ -74,12 +74,12 @@ public class Bal : MonoBehaviour
             ySpeed = ySpeed * -1;
         }
        
-        else if (collision.gameObject.CompareTag("Vertical"))
+        else if (collision.gameObject.CompareTag("rightWall"))
         {
             rightScore++;
             resetBall("left");
         }
-        else if (collision.gameObject.CompareTag("Vertical"))
+        else if (collision.gameObject.CompareTag("leftWall"))
         {
             leftScore++;
             resetBall("right");
