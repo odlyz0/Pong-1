@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cdb7f881876d4b4aa10ba475c6c7a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
+  text: {fileID: 1083360962}
   scoreOne: 0
   scoreTwo: 0
 --- !u!61 &192542760
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   Yposition: 0
   xSpeed: 0
   ySpeed: 0
-  scoreField: {fileID: 0}
+  scoreField: {fileID: 1083360962}
   topScore: 10
 --- !u!50 &1633575909
 Rigidbody2D:
